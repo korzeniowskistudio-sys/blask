@@ -31,13 +31,23 @@ The live hostname responded over verified HTTPS with status 200; its title was
 
 ## Publication
 
-The user authorized publication at blask.korzeniowski.net. It has **not** been
-published at the time this note was prepared. GitHub now documents encrypted
-Actions repository secrets in `docs/ftp-connection.md`. The workflow
-`.github/workflows/deploy-blask.yml` binds those secrets directly into the FTPS
-client and runs when the public site is pushed to `main`, or by manual dispatch.
-The ordinary cloud shell does not receive these secrets. Do not request
-passwords in chat.
+Published on 26 October 2026 via GitHub Actions run 40349944526:
+https://github.com/korzeniowskistudio-sys/blask/actions/runs/40349944526
+
+The FTPS upload and workflow HTTPS checks passed. Independently downloaded all
+seven live public files over verified HTTPS and confirmed their SHA-256 hashes
+match the locally tested build exactly. The ordinary cloud shell never received
+the stored FTPS credentials. The direct cloud Chromium live navigation encountered
+the proxy CA trust issue; local Chromium behavior checks and independent verified
+HTTPS content checks succeeded. No browser TLS validation was disabled.
+
+The workflow `.github/workflows/deploy-blask.yml` runs on changes to public site
+or deployment files on `main`, or by manual dispatch. It uses encrypted repository
+secrets documented in `docs/ftp-connection.md`. It backs up an existing index,
+uploads only the explicit public-file list, checks transfer sizes, then publishes
+the new index last. It does not mirror or delete unrelated files.
+
+The following is the alternative local deployment route:
 
 Using the existing local FileZilla connection described in hosting-handover.md,
 upload only the **contents** of `site/` to:

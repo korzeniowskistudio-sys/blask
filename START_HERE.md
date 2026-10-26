@@ -10,7 +10,9 @@ The Biruta source import is complete in
 `content/sources/001-reflective-larch-pattern.md` and its JSON companion.
 The user approved audio v3 and requested publication of the work-in-progress
 page at **blask.korzeniowski.net**, including original photos, the approved
-animation, and sound. The public build is in `site/`. Read
+animation, and sound. The public build is in `site/` and is now live at
+https://blask.korzeniowski.net/ (GitHub Actions run 40349944526 succeeded;
+all seven live public files matched the tested build over verified HTTPS). Read
 `docs/wip-site-handover.md` and `docs/ftp-connection.md` for deployment.
 The earlier pending-import and Mac-only deployment notes below describe the
 original handover; the GitHub Actions secrets are the newer deployment route.
