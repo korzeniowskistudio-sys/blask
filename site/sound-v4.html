@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161715">
+  <meta name="robots" content="noindex">
+  <title>Blask — Three minutes in the rain</title>
+  <style>
+    :root { color-scheme: dark; --ground: #161715; --ink: #f1f2e9; --accent: #d8f396; --secondary: #b9bcb2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ground); color: var(--ink); font: 18px/1.55 Arial, Helvetica, sans-serif; }
+    main { max-width: 850px; margin: auto; padding: 40px 24px 80px; }
+    a { color: inherit; text-underline-offset: .25em; }
+    a:focus-visible, button:focus-visible, audio:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    h1 { font-size: clamp(38px, 7vw, 64px); line-height: 1.03; letter-spacing: -.045em; margin: 70px 0 24px; max-width: 17ch; }
+    h2 { font-size: 28px; line-height: 1.15; letter-spacing: -.025em; margin: 60px 0 18px; font-weight: 400; }
+    p { max-width: 62ch; }
+    audio { display: block; width: 100%; margin: 30px 0 20px; }
+    .chapters { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0; }
+    .chapters[hidden] { display: none; }
+    button { font: inherit; font-size: 16px; color: var(--ground); background: var(--accent); border: 0; padding: 13px 17px; min-height: 48px; cursor: pointer; }
+    button:hover { background: var(--ink); }
+    .note { color: var(--secondary); font-size: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="/">Back to Blask</a>
+    <h1>Three minutes<br>in the rain.</h1>
+    <p>Audio v4. A more varied ride: changing pedal rhythms, close freewheeling, quieter stops, passing street sounds, two kinds of bell, and a dog in the distance.</p>
+    <audio id="v4" controls loop preload="metadata" aria-label="Audio v4, three-minute rider soundscape">
+      <source src="assets/blask-rider-rain-loop-v4.opus" type="audio/ogg; codecs=opus">
+      <source src="assets/blask-rider-rain-loop-v4.mp3" type="audio/mpeg">
+    </audio>
+    <p class="note">3:00 · Stereo · Loops continuously · Press play to listen</p>
+    <div class="chapters" aria-label="Jump to a part of the ride" hidden>
+      <button type="button" data-time="0">0:00 · Setting off</button>
+      <button type="button" data-time="30">0:30 · Busy street</button>
+      <button type="button" data-time="60">1:00 · Slow down</button>
+      <button type="button" data-time="90">1:30 · Pedal again</button>
+      <button type="button" data-time="120">2:00 · Quieter corner</button>
+      <button type="button" data-time="150">2:30 · Passing cyclist</button>
+    </div>
+    <p><a href="assets/blask-rider-rain-loop-v4.mp3" download>Download v4 MP3</a> · <a href="assets/blask-rider-rain-loop-v4.opus" download>Download v4 Opus</a></p>
+    <p class="note">A new arrangement of the existing recordings. Prepared for listening review.</p>
+    <h2>Compare with v3.</h2>
+    <p>The approved two-minute version currently used on the Blask homepage.</p>
+    <audio id="v3" controls loop preload="metadata" aria-label="Approved audio v3, two-minute rider soundscape">
+      <source src="assets/blask-rider-rain-loop-v3.opus" type="audio/ogg; codecs=opus">
+      <source src="assets/blask-rider-rain-loop-v3.mp3" type="audio/mpeg">
+    </audio>
+    <p id="status" class="note" role="status"></p>
+  </main>
+  <script>
+    const current = document.querySelector('#v4');
+    const previous = document.querySelector('#v3');
+    for (const audio of [current, previous]) {
+      audio.volume = 0.5;
+      audio.addEventListener('play', () => {
+        for (const other of [current, previous]) if (other !== audio) other.pause();
+      });
+    }
+    current.addEventListener('loadedmetadata', () => { document.querySelector('.chapters').hidden = false; });
+    for (const button of document.querySelectorAll('[data-time]')) {
+      button.addEventListener('click', async () => {
+        current.currentTime = Number(button.dataset.time);
+        try { await current.play(); document.querySelector('#status').textContent = ''; }
+        catch { document.querySelector('#status').textContent = 'Press play on the audio player to listen.'; }
+      });
+    }
+  </script>
+</body>
+</html>

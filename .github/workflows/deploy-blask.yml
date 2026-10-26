@@ -40,7 +40,7 @@ jobs:
               html = response.read().decode()
               assert 'Still scene. Shifting light.' in html
               assert 'id="sound-toggle"' in html
-          for asset in ['assets/reflective-larch-1706.webp', 'assets/reflective-larch-1710.webp', 'assets/reflective-clothing-dim.png', 'assets/blask-rider-rain-loop-v3.opus', 'assets/blask-rider-rain-loop-v3.mp3', 'reflection.js']:
+          for asset in ['assets/reflective-larch-1706.webp', 'assets/reflective-larch-1710.webp', 'assets/reflective-clothing-dim.png', 'assets/blask-rider-rain-loop-v3.opus', 'assets/blask-rider-rain-loop-v3.mp3', 'assets/blask-rider-rain-loop-v4.opus', 'assets/blask-rider-rain-loop-v4.mp3', 'sound-v4.html', 'reflection.js']:
               with urlopen(base + asset, timeout=30) as response:
                   assert response.status == 200
                   assert len(response.read(1024)) > 0

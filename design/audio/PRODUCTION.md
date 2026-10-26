@@ -109,3 +109,34 @@ updated listen.html. Earlier versions retained. Technical validation is saved
 in audio-validation-v3.json. The user approved the final v3 audio on
 26 October 2026 in the continuation conversation. Use v3 as the approved
 website ambience. No deployment performed.
+
+## Revision 4 — three-minute changing ride
+
+Requested 26 October 2026: a new three-minute version with more distinct changes
+and greater sound variety. Created a new arrangement of the retained ElevenLabs
+recordings; no new paid generations. Version 3 remains the approved homepage audio.
+
+- 180-second, 48 kHz stereo master with twelve overlapping passages: setting off,
+  building pedalling, a busy street, close freewheeling, slowing at a crossing,
+  rain coming forward, restarting, passing traffic, a quieter corner, coasting,
+  a passing cyclist, and settling back into the ride.
+- Seven gear-change accents, three brake events, four bell events using both
+  retained bell recordings, two distant dog events, and four moving wet-street
+  swells. The underlying recorded clips can also contain their own events.
+- Different source offsets, modest tempo changes, varying levels and stereo
+  movement make recurring sources less identical. There are no newly recorded
+  sound categories; this version varies the existing recordings and arrangement.
+- Three-second overlaps also span the end/start boundary. No silent splice gaps
+  were found, and the boundary sample step passed the ordinary-step comparison.
+- Master: -23.03 LUFS, -2.50 dBTP. Web MP3: -23.24 LUFS, -2.57 dBTP.
+  Web Opus: -23.03 LUFS, -2.60 dBTP. Exactly 180 seconds decoded in the master.
+
+Deliverables: `blask-rider-rain-loop-v4.wav/.mp3/.opus`,
+`audio-validation-v4.json`, and reproducible `scripts/audio/mix-varied-v4.py`
+(requires NumPy and FFmpeg). WAV is a lossless export of edits to MP3-derived
+sources, not an original lossless recording.
+
+The separate public review page is `site/sound-v4.html`, with v4, six seek points,
+downloads and a v3 comparison. Neither player autoplays, and starting one pauses
+the other. Technical checks do not substitute for a listening review; user
+approval of v4 is pending. The Blask homepage continues to use v3.

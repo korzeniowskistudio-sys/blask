@@ -1,0 +1,326 @@
+{
+  "version": 4,
+  "duration_seconds": 180,
+  "sample_rate": 48000,
+  "channels": 2,
+  "source": "New edit of existing ElevenLabs recordings; no new API generation",
+  "scenes": [
+    {
+      "start_seconds": 0,
+      "description": "Setting off",
+      "bike_source": "rider-pedalling-01.mp3",
+      "bike_rms_dbfs": -28,
+      "street_source": "street-01.mp3",
+      "street_rms_dbfs": -37
+    },
+    {
+      "start_seconds": 15,
+      "description": "Pedalling builds",
+      "bike_source": "rider-pedalling-02.mp3",
+      "bike_rms_dbfs": -25,
+      "street_source": "street-02.mp3",
+      "street_rms_dbfs": -34
+    },
+    {
+      "start_seconds": 30,
+      "description": "Busy wet street",
+      "bike_source": "rider-pedalling-01.mp3",
+      "bike_rms_dbfs": -28,
+      "street_source": "street-04.mp3",
+      "street_rms_dbfs": -29
+    },
+    {
+      "start_seconds": 45,
+      "description": "Coasting",
+      "bike_source": "rider-freewheel-01.mp3",
+      "bike_rms_dbfs": -24,
+      "street_source": "street-05.mp3",
+      "street_rms_dbfs": -36
+    },
+    {
+      "start_seconds": 60,
+      "description": "Slowing at a crossing",
+      "bike_source": "rider-freewheel-01.mp3",
+      "bike_rms_dbfs": -35,
+      "street_source": "street-02.mp3",
+      "street_rms_dbfs": -31
+    },
+    {
+      "start_seconds": 75,
+      "description": "Rain comes forward",
+      "bike_source": null,
+      "bike_rms_dbfs": null,
+      "street_source": "street-01.mp3",
+      "street_rms_dbfs": -29
+    },
+    {
+      "start_seconds": 90,
+      "description": "Back on the pedals",
+      "bike_source": "rider-pedalling-02.mp3",
+      "bike_rms_dbfs": -25,
+      "street_source": "street-05.mp3",
+      "street_rms_dbfs": -37
+    },
+    {
+      "start_seconds": 105,
+      "description": "Traffic moves past",
+      "bike_source": "rider-pedalling-01.mp3",
+      "bike_rms_dbfs": -29,
+      "street_source": "street-04.mp3",
+      "street_rms_dbfs": -29
+    },
+    {
+      "start_seconds": 120,
+      "description": "A quieter corner",
+      "bike_source": "rider-freewheel-01.mp3",
+      "bike_rms_dbfs": -31,
+      "street_source": "street-01.mp3",
+      "street_rms_dbfs": -36
+    },
+    {
+      "start_seconds": 135,
+      "description": "Freewheel close up",
+      "bike_source": "rider-freewheel-01.mp3",
+      "bike_rms_dbfs": -24,
+      "street_source": "street-05.mp3",
+      "street_rms_dbfs": -38
+    },
+    {
+      "start_seconds": 150,
+      "description": "A passing cyclist",
+      "bike_source": "rider-pedalling-02.mp3",
+      "bike_rms_dbfs": -26,
+      "street_source": "street-02.mp3",
+      "street_rms_dbfs": -33
+    },
+    {
+      "start_seconds": 165,
+      "description": "Settling into the ride",
+      "bike_source": "rider-pedalling-01.mp3",
+      "bike_rms_dbfs": -28,
+      "street_source": "street-01.mp3",
+      "street_rms_dbfs": -37
+    }
+  ],
+  "events": [
+    {
+      "time_seconds": 9.2,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -20,
+      "pan_start": 0.46,
+      "pan_end": null,
+      "tempo": 1
+    },
+    {
+      "time_seconds": 16.5,
+      "sound": "moving wet-street swell",
+      "source": "street-04.mp3"
+    },
+    {
+      "time_seconds": 24.1,
+      "source": "bicycle-bell-single.mp3",
+      "peak_before_master_dbfs": -17,
+      "pan_start": 0.2,
+      "pan_end": 0.62,
+      "tempo": 1.0
+    },
+    {
+      "time_seconds": 34.6,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -22,
+      "pan_start": 0.53,
+      "pan_end": null,
+      "tempo": 1.08
+    },
+    {
+      "time_seconds": 43.2,
+      "source": "rider-braking.mp3",
+      "peak_before_master_dbfs": -23,
+      "pan_start": 0.5,
+      "pan_end": null,
+      "tempo": 1.04
+    },
+    {
+      "time_seconds": 51.0,
+      "sound": "moving wet-street swell",
+      "source": "street-02.mp3"
+    },
+    {
+      "time_seconds": 58.8,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -23,
+      "pan_start": 0.48,
+      "pan_end": null,
+      "tempo": 0.96
+    },
+    {
+      "time_seconds": 69.5,
+      "source": "rider-braking.mp3",
+      "peak_before_master_dbfs": -20,
+      "pan_start": 0.5,
+      "pan_end": null,
+      "tempo": 0.94
+    },
+    {
+      "time_seconds": 86.3,
+      "source": "bicycle-bell-classic.mp3",
+      "peak_before_master_dbfs": -20,
+      "pan_start": 0.82,
+      "pan_end": 0.42,
+      "tempo": 0.96
+    },
+    {
+      "time_seconds": 93.1,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -19,
+      "pan_start": 0.52,
+      "pan_end": null,
+      "tempo": 1.04
+    },
+    {
+      "time_seconds": 105.5,
+      "sound": "moving wet-street swell",
+      "source": "street-05.mp3"
+    },
+    {
+      "time_seconds": 112.4,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -22,
+      "pan_start": 0.44,
+      "pan_end": null,
+      "tempo": 1.1
+    },
+    {
+      "time_seconds": 119.4,
+      "source": "distant-dog-bark.mp3",
+      "peak_before_master_dbfs": -29,
+      "pan_start": 0.82,
+      "pan_end": null,
+      "tempo": 1.0
+    },
+    {
+      "time_seconds": 127.4,
+      "source": "rider-braking.mp3",
+      "peak_before_master_dbfs": -25,
+      "pan_start": 0.5,
+      "pan_end": null,
+      "tempo": 1.1
+    },
+    {
+      "time_seconds": 133.8,
+      "source": "distant-dog-bark.mp3",
+      "peak_before_master_dbfs": -34,
+      "pan_start": 0.18,
+      "pan_end": null,
+      "tempo": 1.08
+    },
+    {
+      "time_seconds": 145.8,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -21,
+      "pan_start": 0.55,
+      "pan_end": null,
+      "tempo": 0.94
+    },
+    {
+      "time_seconds": 150.7,
+      "source": "bicycle-bell-single.mp3",
+      "peak_before_master_dbfs": -21,
+      "pan_start": 0.83,
+      "pan_end": 0.18,
+      "tempo": 1.07
+    },
+    {
+      "time_seconds": 157.2,
+      "source": "bicycle-bell-classic.mp3",
+      "peak_before_master_dbfs": -24,
+      "pan_start": 0.25,
+      "pan_end": 0.08,
+      "tempo": 1.04
+    },
+    {
+      "time_seconds": 161.4,
+      "sound": "moving wet-street swell",
+      "source": "street-04.mp3"
+    },
+    {
+      "time_seconds": 168.3,
+      "source": "rider-gear-change.mp3",
+      "peak_before_master_dbfs": -23,
+      "pan_start": 0.48,
+      "pan_end": null,
+      "tempo": 1.02
+    }
+  ],
+  "master_gain_db": -2.76,
+  "loudness": {
+    "input_i": "-23.03",
+    "input_tp": "-2.50",
+    "input_lra": "6.70",
+    "input_thresh": "-33.03",
+    "output_i": "-22.88",
+    "output_tp": "-2.00",
+    "output_lra": "6.60",
+    "output_thresh": "-32.88",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.12"
+  },
+  "web_formats": {
+    "mp3": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "180.024000",
+        "size": "4321196"
+      },
+      "loudness": {
+        "input_i": "-23.24",
+        "input_tp": "-2.57",
+        "input_lra": "6.70",
+        "input_thresh": "-33.24",
+        "output_i": "-22.88",
+        "output_tp": "-2.00",
+        "output_lra": "6.60",
+        "output_thresh": "-32.88",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.12"
+      }
+    },
+    "opus": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "sample_rate": "48000",
+          "channels": 2
+        }
+      ],
+      "format": {
+        "duration": "180.006500",
+        "size": "2778115"
+      },
+      "loudness": {
+        "input_i": "-23.03",
+        "input_tp": "-2.60",
+        "input_lra": "6.60",
+        "input_thresh": "-33.03",
+        "output_i": "-22.87",
+        "output_tp": "-2.00",
+        "output_lra": "6.60",
+        "output_thresh": "-32.87",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.13"
+      }
+    }
+  },
+  "minimum_100ms_rms": 0.012936718761920929,
+  "loop_boundary_step": 0.009196758270263672,
+  "ordinary_step_99_9_percentile": 0.32102417945861816,
+  "review_status": "Technical checks complete; user listening review pending"
+}

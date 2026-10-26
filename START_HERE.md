@@ -17,6 +17,11 @@ all seven live public files matched the tested build over verified HTTPS). Read
 The earlier pending-import and Mac-only deployment notes below describe the
 original handover; the GitHub Actions secrets are the newer deployment route.
 
+Audio v4 is a separate 180-second arrangement with twelve changing passages.
+Its comparison/listening page is `site/sound-v4.html` (public `/sound-v4.html`).
+See `design/audio/PRODUCTION.md` and `audio-validation-v4.json` for the timeline
+and measurements. User listening approval is pending; homepage audio remains v3.
+
 ## User's goal and current priority
 
 Build Blask, a reflective outdoor clothing brand focused mainly on cyclists.

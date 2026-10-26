@@ -13,6 +13,9 @@ FILES = (
     "assets/reflective-clothing-dim.png",
     "assets/blask-rider-rain-loop-v3.opus",
     "assets/blask-rider-rain-loop-v3.mp3",
+    "assets/blask-rider-rain-loop-v4.opus",
+    "assets/blask-rider-rain-loop-v4.mp3",
+    "sound-v4.html",
     "reflection.js",
     "index.html",
 )
