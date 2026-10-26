@@ -80,3 +80,7 @@ authorized audio generations. Cloud FTPS was not verified or used to deploy.
 The earlier “no credentials transferred” observations are historical, not the
 latest conversation state. A fresh task must use secure provisioning or the
 Mac's private setup, not assume credentials are present in its environment.
+
+## GitHub Actions credential provisioning — 26 October 2026
+
+At the user's request, the existing FTPS connection was configured as five encrypted GitHub Actions repository secrets: `BLASK_FTP_HOST`, `BLASK_FTP_PORT`, `BLASK_FTP_USERNAME`, `BLASK_FTP_PASSWORD`, and `BLASK_FTP_REMOTE_DIR`. Presence was verified after storage. See [FTP connection instructions](ftp-connection.md). The password is not in tracked files. Actions secrets do not provision credentials into an ordinary Codex cloud session. No deployment workflow was created or run, and no website files were uploaded in this step.
