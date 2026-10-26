@@ -1,0 +1,103 @@
+{
+  "background": {
+    "gain_db": -24.08,
+    "source_measurement": {
+      "input_i": "-10.92",
+      "input_tp": "0.97",
+      "input_lra": "14.00",
+      "input_thresh": "-21.41",
+      "output_i": "-22.11",
+      "output_tp": "-8.05",
+      "output_lra": "10.50",
+      "output_thresh": "-32.28",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.89"
+    }
+  },
+  "rider": {
+    "gain_db": 1.8099999999999987,
+    "source_measurement": {
+      "input_i": "-24.81",
+      "input_tp": "-6.19",
+      "input_lra": "7.90",
+      "input_thresh": "-35.01",
+      "output_i": "-23.09",
+      "output_tp": "-3.58",
+      "output_lra": "8.10",
+      "output_thresh": "-33.18",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    }
+  },
+  "gear": {
+    "gain_db": 1.1799999999999997,
+    "source_measurement": {
+      "input_i": "-22.18",
+      "input_tp": "-5.07",
+      "input_lra": "0.00",
+      "input_thresh": "-32.18",
+      "output_i": "-23.00",
+      "output_tp": "-5.89",
+      "output_lra": "0.00",
+      "output_thresh": "-33.00",
+      "normalization_type": "linear",
+      "target_offset": "-0.00"
+    }
+  },
+  "brake": {
+    "gain_db": -10.01,
+    "source_measurement": {
+      "input_i": "-13.99",
+      "input_tp": "-1.23",
+      "input_lra": "1.00",
+      "input_thresh": "-27.00",
+      "output_i": "-18.23",
+      "output_tp": "-5.47",
+      "output_lra": "0.00",
+      "output_thresh": "-30.27",
+      "normalization_type": "dynamic",
+      "target_offset": "-4.77"
+    }
+  },
+  "master": {
+    "gain_db": -0.4800000000000004,
+    "source_measurement": {
+      "input_i": "-22.52",
+      "input_tp": "-3.96",
+      "input_lra": "6.70",
+      "input_thresh": "-32.64",
+      "output_i": "-23.00",
+      "output_tp": "-2.47",
+      "output_lra": "7.60",
+      "output_thresh": "-33.03",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.00"
+    }
+  },
+  "final": {
+    "input_i": "-23.00",
+    "input_tp": "-4.44",
+    "input_lra": "6.70",
+    "input_thresh": "-33.12",
+    "output_i": "-23.00",
+    "output_tp": "-2.47",
+    "output_lra": "7.60",
+    "output_thresh": "-33.03",
+    "normalization_type": "dynamic",
+    "target_offset": "0.00"
+  },
+  "duration": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "format": {
+      "duration": "120.000000"
+    }
+  },
+  "note": "No new bell generated; original bell-prompted section street-03 excluded. Generated content still requires listening review."
+}

@@ -1,0 +1,11 @@
+{
+  "config": {
+    "network": {
+      "allowed_domains": [
+        "api.elevenlabs.io",
+        "elevenlabs.io",
+        "biruta.korzeniowski.net"
+      ]
+    }
+  }
+}

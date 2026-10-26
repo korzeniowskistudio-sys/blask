@@ -1,0 +1,11 @@
+{
+  "id": "001",
+  "source_url": "https://biruta.korzeniowski.net/portfolio_page/reflective-larch-pattern/",
+  "purpose": "First source text for the new Blask website",
+  "status": "pending_fetch",
+  "text": null,
+  "title": null,
+  "requested_on": "2026-10-26",
+  "blocker": "Environment proxy denies HTTPS CONNECT with HTTP 403. Saving the domain addition failed because the environment draft has a stale base version. Text not retrieved.",
+  "extraction_intent": "Preserve original article text and headings without rewriting; exclude site navigation and footer."
+}

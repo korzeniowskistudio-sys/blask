@@ -1,0 +1,42 @@
+{
+  "events": [
+    {
+      "time_seconds": 22,
+      "sound": "single brass bicycle bell"
+    },
+    {
+      "time_seconds": 54,
+      "sound": "one distant dog bark"
+    },
+    {
+      "time_seconds": 96,
+      "sound": "classic mechanical bicycle bell"
+    }
+  ],
+  "loudness": {
+    "input_i": "-22.93",
+    "input_tp": "-4.44",
+    "input_lra": "6.70",
+    "input_thresh": "-33.05",
+    "output_i": "-23.01",
+    "output_tp": "-2.47",
+    "output_lra": "7.50",
+    "output_thresh": "-33.04",
+    "normalization_type": "dynamic",
+    "target_offset": "0.01"
+  },
+  "format": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "sample_rate": "44100",
+        "channels": 2
+      }
+    ],
+    "format": {
+      "duration": "120.000000"
+    }
+  },
+  "notes": "Existing v2 bed preserved, no processing across loop boundary. Each generated event placed once; event content requires listening review."
+}
