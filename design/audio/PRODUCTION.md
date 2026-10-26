@@ -106,4 +106,6 @@ dog bark with ElevenLabs. Placed one instance of each in the retained v2 mix:
 The existing rider and street bed remains unchanged. All additions occur away
 from the loop boundary. Exported blask-rider-rain-loop-v3.wav/.mp3/.opus and
 updated listen.html. Earlier versions retained. Technical validation is saved
-in audio-validation-v3.json; generated event content still needs user audition.
+in audio-validation-v3.json. The user approved the final v3 audio on
+26 October 2026 in the continuation conversation. Use v3 as the approved
+website ambience. No deployment performed.

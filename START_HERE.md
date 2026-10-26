@@ -4,6 +4,17 @@ Handover prepared 26 October 2026 from the “Set up blask” conversation.
 This repository contains the work, decisions, and next steps; it is not a full
 transcript. No credentials are included.
 
+## Continuation update — 26 October 2026
+
+The Biruta source import is complete in
+`content/sources/001-reflective-larch-pattern.md` and its JSON companion.
+The user approved audio v3 and requested publication of the work-in-progress
+page at **blask.korzeniowski.net**, including original photos, the approved
+animation, and sound. The public build is in `site/`. Read
+`docs/wip-site-handover.md` and `docs/ftp-connection.md` for deployment.
+The earlier pending-import and Mac-only deployment notes below describe the
+original handover; the GitHub Actions secrets are the newer deployment route.
+
 ## User's goal and current priority
 
 Build Blask, a reflective outdoor clothing brand focused mainly on cyclists.
@@ -56,8 +67,9 @@ The latest user request added two different bells and one distant dog bark:
 - 0:54: quiet distant dog bark.
 - 1:36: classic mechanical bicycle bell.
 
-The user has not yet approved the final v3 audio. Timing, duration, loudness and
-peak headroom were checked; do not claim a human listening review was completed.
+The user approved the final v3 audio on 26 October 2026 in the continuation
+conversation. Use v3 as the approved website ambience. Timing, duration,
+loudness and peak headroom were also checked during production.
 Keep the earlier versions and source clips for revisions. Do not regenerate
 paid ElevenLabs assets merely to resume work. Details and measurement reports
 are in design/audio/PRODUCTION.md and audio-validation*.json.

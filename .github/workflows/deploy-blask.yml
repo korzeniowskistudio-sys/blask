@@ -1,0 +1,48 @@
+name: Deploy Blask website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'scripts/deploy-site.py'
+      - '.github/workflows/deploy-blask.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blask-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload public website using verified FTPS
+        env:
+          BLASK_FTP_HOST: ${{ secrets.BLASK_FTP_HOST }}
+          BLASK_FTP_PORT: ${{ secrets.BLASK_FTP_PORT }}
+          BLASK_FTP_USERNAME: ${{ secrets.BLASK_FTP_USERNAME }}
+          BLASK_FTP_PASSWORD: ${{ secrets.BLASK_FTP_PASSWORD }}
+          BLASK_FTP_REMOTE_DIR: ${{ secrets.BLASK_FTP_REMOTE_DIR }}
+        run: python3 scripts/deploy-site.py
+      - name: Verify live website over HTTPS
+        run: |
+          python3 - <<'PY'
+          from urllib.request import urlopen
+          import time
+          base = 'https://blask.korzeniowski.net/'
+          with urlopen(base + '?deploy=' + str(time.time_ns()), timeout=30) as response:
+              html = response.read().decode()
+              assert 'Still scene. Shifting light.' in html
+              assert 'id="sound-toggle"' in html
+          for asset in ['assets/reflective-larch-1706.webp', 'assets/reflective-larch-1710.webp', 'assets/reflective-clothing-dim.png', 'assets/blask-rider-rain-loop-v3.opus', 'assets/blask-rider-rain-loop-v3.mp3', 'reflection.js']:
+              with urlopen(base + asset, timeout=30) as response:
+                  assert response.status == 200
+                  assert len(response.read(1024)) > 0
+          print('Live page and all public assets verified over HTTPS.')
+          PY

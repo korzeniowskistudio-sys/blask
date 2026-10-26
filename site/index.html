@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161715">
+  <meta name="description" content="Blask — reflective clothing. A new website is taking shape. Discover the original Reflective Larch Pattern project by Biruta Korzeniowska.">
+  <title>Blask — Work in progress</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23161715'/%3E%3Ctext x='14' y='47' font-family='Arial' font-weight='700' font-size='44' fill='%23f1f2e9'%3Eb%3C/text%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: dark; --ground: #161715; --ink: #f1f2e9; --secondary: #b9bcb2; --accent: #d8f396; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ground); color: var(--ink); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-underline-offset: .3em; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+    .page { min-height: 100svh; display: grid; grid-template-columns: 43% 57%; }
+    .intro { padding: 36px 36px 28px; display: flex; flex-direction: column; align-items: flex-start; }
+    .signature { font-size: 17px; margin: 0; }
+    .message { margin: auto 0; padding: 64px 0; }
+    h1 { font-size: clamp(86px, 12.4vw, 220px); line-height: .84; letter-spacing: -.075em; margin: 0 0 40px -.065em; font-weight: 700; }
+    h2 { font-size: clamp(24px, 2.5vw, 38px); font-weight: 400; letter-spacing: -.035em; line-height: 1.12; margin: 0 0 20px; }
+    .description { font-size: 18px; line-height: 1.55; max-width: 29ch; margin: 0 0 32px; }
+    .project-link { display: inline-flex; align-items: center; gap: 22px; padding: 15px 20px; background: var(--accent); color: var(--ground); text-decoration: none; font-size: 16px; transition: transform .2s ease, background .2s ease; }
+    .project-link:hover { background: var(--ink); transform: translateY(-2px); }
+    .project-link:active { transform: translateY(1px); }
+    .credit { font-size: 14px; line-height: 1.6; color: var(--secondary); margin: 0; max-width: 36ch; }
+    .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; min-width: 0; margin: 0; background: var(--ground); }
+    .photos a { display: block; min-width: 0; overflow: hidden; }
+    .photos img { width: 100%; height: 100svh; min-height: 680px; object-fit: cover; object-position: 48% center; display: block; transition: transform .7s ease; }
+    .photos a:last-child img { object-position: 45% center; }
+    .photos a:hover img { transform: scale(1.025); }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    .sound-control { position: fixed; bottom: 22px; right: 22px; z-index: 5; padding: 14px 20px; min-height: 48px; background: var(--accent); color: var(--ground); border: 0; font-size: 16px; }
+    .sound-control:hover { background: var(--ink); }
+    .reflection { display: grid; grid-template-columns: 43% 57%; align-items: center; padding: 100px 36px; gap: 0; }
+    .reflection-copy { padding-right: 32px; }
+    .reflection-copy p { font-size: 18px; line-height: 1.55; max-width: 30ch; }
+    .reflection figure { position: relative; margin: 0; width: min(100%, 620px); justify-self: center; line-height: 0; }
+    .reflection figure img { width: 100%; height: auto; display: block; }
+    .reflection canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .motion-control { background: var(--ink); color: var(--ground); border: 0; padding: 14px 20px; margin: 12px 0 24px; min-height: 48px; }
+    .reflection label { display: block; font-size: 16px; }
+    .reflection input { width: min(100%, 260px); accent-color: var(--accent); min-height: 44px; margin: 8px 0; }
+    .reflection .note { font-size: 14px; color: var(--secondary); }
+    #audio-status { position: fixed; bottom: 78px; right: 22px; z-index: 5; background: var(--ground); max-width: 30ch; margin: 0; }
+    @media (min-width: 1700px) { .intro { padding: 48px; } }
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr; }
+      .intro { min-height: 620px; padding: 26px 24px; }
+      .message { padding: 70px 0 54px; }
+      h1 { font-size: clamp(110px, 24vw, 200px); margin-bottom: 32px; }
+      h2 { font-size: 30px; }
+      .description { max-width: 38ch; }
+      .photos img { height: 76vw; min-height: 0; object-position: center; }
+      .reflection { grid-template-columns: 1fr; padding: 72px 24px 100px; gap: 32px; }
+      .reflection-copy { padding: 0; }
+    }
+    @media (max-width: 480px) {
+      .intro { min-height: 570px; padding: 22px; }
+      .message { padding: 56px 0 40px; }
+      h1 { font-size: 27vw; }
+      h2 { font-size: 28px; }
+      .description { font-size: 17px; }
+      .photos { gap: 3px; }
+      .photos img { height: 86vw; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main>
+  <div class="page">
+    <section class="intro" aria-labelledby="brand">
+      <p class="signature">Reflective clothing by Biruta Korzeniowska</p>
+      <div class="message">
+        <h1 id="brand">blask</h1>
+        <h2>Work in progress.</h2>
+        <p class="description">Our new website is taking shape. In the meantime, discover the original Reflective Larch Pattern project.</p>
+        <a class="project-link" href="https://biruta.korzeniowski.net/portfolio_page/reflective-larch-pattern/">Explore the project <span aria-hidden="true">↗︎</span></a>
+        <p style="margin: 24px 0 0; font-size: 16px"><a href="#reflection">See the reflection in motion ↓</a></p>
+      </div>
+      <p class="credit">Design &amp; imagery from <a href="https://biruta.korzeniowski.net/portfolio_page/reflective-larch-pattern/">Biruta Korzeniowska’s portfolio</a>.</p>
+    </section>
+    <div class="photos" aria-label="Reflective Larch Pattern photographs">
+      <a href="assets/reflective-larch-1706.webp" aria-label="View full front photograph">
+        <img src="assets/reflective-larch-1706.webp" alt="A person standing on a city street at night wearing a black jacket with bright reflective larch patterns." width="1280" height="1920" fetchpriority="high">
+      </a>
+      <a href="assets/reflective-larch-1710.webp" aria-label="View full back photograph">
+        <img src="assets/reflective-larch-1710.webp" alt="Back view of the jacket, its reflective branching pattern illuminated against the dark street." width="1280" height="1920">
+      </a>
+    </div>
+  </div>
+    <section class="reflection" id="reflection" aria-labelledby="reflection-title">
+      <div class="reflection-copy">
+        <h2 id="reflection-title">Still scene. Shifting light.</h2>
+        <p>A glimpse of Blask after dark. Watch the light catch the pattern, and turn on sound for a ride through the rain.</p>
+        <button class="motion-control" id="toggle" aria-pressed="false">Pause animation</button>
+        <label for="strength">Reflection intensity</label>
+        <input id="strength" type="range" min="0" max="100" value="85">
+        <p class="note">Animated concept image. Simulated reflection.</p>
+        <p id="status" role="status"></p>
+      </div>
+      <figure>
+        <img id="photo" src="assets/reflective-clothing-dim.png" alt="Two people in reflective patterned jackets walking a dog at night, with light moving across the jacket stripes." width="1024" height="1536">
+        <canvas id="shine" aria-hidden="true"></canvas>
+      </figure>
+    </section>
+  </main>
+  <audio id="ambience" loop preload="none">
+    <source src="assets/blask-rider-rain-loop-v3.opus" type="audio/ogg; codecs=opus">
+    <source src="assets/blask-rider-rain-loop-v3.mp3" type="audio/mpeg">
+  </audio>
+  <button class="sound-control" id="sound-toggle" aria-pressed="false" hidden>Enable sound</button>
+  <p id="audio-status" role="status"></p>
+  <script src="reflection.js"></script>
+  <script>
+    const ambience = document.querySelector('#ambience');
+    const soundToggle = document.querySelector('#sound-toggle');
+    const audioStatus = document.querySelector('#audio-status');
+    ambience.volume = 0.5;
+    soundToggle.hidden = false;
+    function syncSound() {
+      const playing = !ambience.paused;
+      soundToggle.textContent = playing ? 'Mute sound' : 'Enable sound';
+      soundToggle.setAttribute('aria-pressed', String(playing));
+    }
+    ambience.addEventListener('play', syncSound);
+    ambience.addEventListener('pause', syncSound);
+    soundToggle.addEventListener('click', async () => {
+      audioStatus.textContent = '';
+      if (!ambience.paused) { ambience.pause(); return; }
+      try { await ambience.play(); }
+      catch { audioStatus.textContent = 'Sound could not start. Please try again.'; }
+      syncSound();
+    });
+  </script>
+</body>
+</html>
